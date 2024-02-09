@@ -1,3 +1,6 @@
+##leavcing this one here as an example of my bad code
+
+
 from saucenao_api import SauceNao 
 import os, random, requests,time,sys
 # Replace the key with your own
