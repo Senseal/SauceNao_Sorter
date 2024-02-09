@@ -6,12 +6,13 @@ import time
 from saucenao_api.errors import UnknownServerError, LongLimitReachedError
 
 # Define source folders
-source_folder = r"M:\Weeb posting\#Sortbatch\Source"
-renamed_folder = r"M:\Weeb posting\#Sortbatch\Boorued"
-no_booru_folder = r"M:\Weeb posting\#Sortbatch\NoBooru"
+# Define source folders
+source_folder = r"path_to_source_folder"
+renamed_folder = r"path_to_renamed_folder"
+no_booru_folder = r"path_to_no_booru_folder"
 
 # Initialize SauceNao API
-sauce = SauceNao('37cba0a29ef8c73a72aa70caadfa4dc0a21d718b')  # Replace 'xxxx' with your actual API key
+sauce = SauceNao('xxxx')  # Replace 'xxxx' with your actual API key
 
 # Get the number of files to process
 file_count = sum(1 for _ in os.listdir(source_folder) if os.path.isfile(os.path.join(source_folder, _)))
