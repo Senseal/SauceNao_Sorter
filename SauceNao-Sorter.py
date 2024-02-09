@@ -8,7 +8,7 @@ from saucenao_api.errors import UnknownServerError, LongLimitReachedError
 # Define source folders
 source_folder = r"path_to_source_folder"
 renamed_folder = r"path_to_renamed_folder"
-no_booru_folder = r"path_to_no_booru_folder"
+no_Match = r"path_to_no_Match_Folder"
 
 # Initialize SauceNao API
 sauce = SauceNao('xxxx')  # Replace 'xxxx' with your actual API key
