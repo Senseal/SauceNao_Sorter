@@ -6,7 +6,6 @@ import time
 from saucenao_api.errors import UnknownServerError, LongLimitReachedError
 
 # Define source folders
-# Define source folders
 source_folder = r"path_to_source_folder"
 renamed_folder = r"path_to_renamed_folder"
 no_booru_folder = r"path_to_no_booru_folder"
@@ -39,7 +38,9 @@ for _ in range(file_count):
                         link = url.replace("/post/show/", "/posts/") + ".json"
                         response = requests.get(link)
                         json_data = response.json()
-                        file_addon = json_data.get("tag_string_character", "")  # Get character tags
+                        # !!IMPORTANT!! - Add/Remove the # to the line that you DONT want, as they share a Variable if both are active the character name will be overwriten by the copyright
+                        file_addon = json_data.get("tag_string_character", "")  # Get Character Name(s) tags
+                        file_addon = json_data.get("tag_string_Copyright", "")  # Get Copyright tags
                         break
             
             # Rename and move files
