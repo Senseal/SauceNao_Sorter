@@ -52,7 +52,7 @@ for _ in range(file_count):
                 print("Renaming File and moving")
             else:
                 # Move the file to the folder for files with no match
-                os.replace(os.path.join(source_folder, rand_file), os.path.join(no_booru_folder, rand_file))
+                os.replace(os.path.join(source_folder, rand_file), os.path.join(No_Match, rand_file))
                 print("No matches")
         
         except UnknownServerError:
